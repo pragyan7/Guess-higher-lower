@@ -14,7 +14,6 @@ def format_data(account):
   name = account["name"]
   description = account["description"]
   country = account["country"]
-  # print(f'{name}: {account["follower_count"]}')
   return f"{name}, a {description}, from {country}"
 
 # Compare the followers
@@ -53,6 +52,7 @@ def game():
     b_followers = b['follower_count']
     is_correct = compare_followers(guess, a_followers, b_followers)
     
+    # Clears the screen after user provides a guess
     clear()
     print(logo)
     if is_correct:
